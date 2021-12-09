@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/index.css">
+    <title>REVV.</title>
+</head>
+<body>
+    <main>
+        <div>
+            <h1> Welcome to Revv.</h1> 
+        <ul>
+        <% revvs.forEach((review) => { %>
+            <li><a href='/revv/<%=review._id%>'><%=review.title%></a>
+                <form action='/revv.<%=review._id%>?_method=delete' method='post'>
+                </form>
+            </li>
+        <% }) %>
+         </ul>
+        </div>
+    </main>
+    
+</body>
+</html>

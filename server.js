@@ -3,6 +3,7 @@ const mongoose =require('mongoose');
 const app = express();
 require('dotenv').config();
 const PORT = process.env.PORT;
+const Revv = require('./models/review')
 const methodOverride = require('method-override')
 
 
@@ -14,19 +15,22 @@ db.on('error', (err) => console.log(err.message + 'mongo no run'))
 db.on('connected', () => console.log('mongo connected'))
 db.on('disconnected', () => console.log('mongo disconnected'))
 
+//mount middleware
 app.use(express.urlencoded( { extended: false}))
 app.use(methodOverride('_method'))
+app.use(express.static('public')) //css files, front end js etc
 
 //index route
 
 app.get('/revv',(req,res) => {
-    res.send('here is a home page')
+    Revv.find({}, (err,revvs)=>{
+    res.render('index.ejs', { revvs })    
+    })
 })
 
 //new route
-
 app.get('/revv/:id', (req,res) => {
-    res.send('here is a new review')
+    res.render('new.ejs')
 })
 
 //delete route

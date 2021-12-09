@@ -5,5 +5,9 @@ const revSchema = new Schema ({
     title:String,
     entry:String,
     business:String,
-    // img: { data: Buffer, contentType: String } ??? ask about this!
+
 });
+
+const Revv = mongoose.model('Revv', revSchema)
+
+module.exports = Revv;
