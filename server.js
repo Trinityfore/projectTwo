@@ -5,6 +5,7 @@ require('dotenv').config();
 const PORT = process.env.PORT;
 const Revv = require('./models/review')
 const methodOverride = require('method-override')
+const reviewController = require('./controllers/reviews')
 
 
 //database connection
@@ -20,56 +21,40 @@ app.use(express.urlencoded( { extended: false}))
 app.use(methodOverride('_method'))
 app.use(express.static('public')) //css files, front end js etc
 
-//index route
 
-app.get('/revv',(req,res) => {
-    Revv.find({}, (err,revvs)=>{
-    res.render('index.ejs', { revvs })    
-    })
-})
-
-//new route
-app.get('/revv/:id', (req,res) => {
-    res.render('new.ejs')
-})
-
-//delete route
-app.delete('/revv/:id',(req,res)=> {
-    res.send('this has been deleted')
-})
-
-//update
-app.put('/revv/:id',(req,res) => {
-Revv.findByIdAndUpdate(req.params.id.req.body, { new: true},(err,updated)=> {
-    if (err){
-        res.send('error')
-    } else{
-        res.redirect('/revv')
-    }
-})
-})
-//create route
-app.post('/revv', (req,res)=> {
-    Revv.create(req.body, (err,posted)=> {
-        if (err){
-            res.send('error')
-        } else{
-            res.redirect('/revv')
+//seed route
+app.get('/revv/seed',(req,res)=> {
+    const data = [
+        {
+            title: 'test',
+            entry: 'hello',
+            business: 'my house',
+        },
+        {
+            title: 'other test',
+            entry: 'hello',
+            business: 'my house',
+        },
+        {
+            title: 'mike',
+            entry: 'hello',
+            business: 'my house',
+        },
+        {
+            title: 'scott',
+            entry: 'hello',
+            business: 'my house',
         }
+    ]
+    Revv.deleteMany({}, (err,deleted) => {
+      Revv.create(data, (err,item) => {
+         res.redirect('/revv') 
+      })  
     })
+    
 })
-//edit route
-app.get('/revv/:id/edit',(req,res)=> {
-    Revv.findById(req.params.id, (err,item)=> {
-        res.render('edit.ejs',{ item })
-    })
-})
-//show route
-app.get('/revv/:id',(req,res)=> {
-    Revv.findById(req.params.id,(err,item)=> {
-        res.render('show.ejs',{ item })
-    })
-})
+
+app.use('/', reviewController)
 
 //listener
 app.listen(PORT, () => {

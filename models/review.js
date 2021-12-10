@@ -5,6 +5,7 @@ const revSchema = new Schema ({
     title:String,
     entry:String,
     business:String,
+    //img: String,
 
 });
 

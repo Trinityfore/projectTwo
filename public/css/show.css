@@ -10,14 +10,3 @@ body {
     background-position: center top;
     background-size: cover;
 }
-
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    list-style: none;
- }
-  
- .card {
-     flex: 0 1 24%;
- }
