@@ -11,3 +11,13 @@ body {
     background-size: cover;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 20% auto;
+}
+
+.title {
+    margin:10px;
+}

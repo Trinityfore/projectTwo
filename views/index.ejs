@@ -9,18 +9,16 @@
 </head>
 <body>
     <main>
+        <h1> Welcome to Revv.</h1>
         <div class='centered'>
-            <h1> Welcome to Revv.</h1> 
             <a href='/revv/new'>new revv.</a>
         <ul class='cards' >
         <% revvs.forEach((review) => { %>
-            <li class='card' ><a href='/revv/<%=review._id%>'><%=review.title%></a>
-                <form action='/revv.<%=review._id%>?_method=delete' method='post'>
-                </form>
+            <li class='card' ><a href='/revv/<%=review._id%>'><img src="<%=review.img%>" alt="image"></a> 
+                <a href='/revv/<%=review._id%>'><%=review.title%></a>
             </li>
         <% }) %>
          </ul>
-         
         </div>
     </main>
     

@@ -29,21 +29,25 @@ app.get('/revv/seed',(req,res)=> {
             title: 'test',
             entry: 'hello',
             business: 'my house',
+            img: 'https://images.unsplash.com/photo-1639368216157-33c8fdd3c7b9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80',
         },
         {
             title: 'other test',
             entry: 'hello',
             business: 'my house',
+            img: 'https://images.unsplash.com/photo-1606513792555-7dc667e49911?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1335&q=80',
         },
         {
             title: 'mike',
             entry: 'hello',
             business: 'my house',
+            img: 'https://images.unsplash.com/photo-1637563843021-cb6648e57e97?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1335&q=80',
         },
         {
-            title: 'scott',
+            title: 'other other test',
             entry: 'hello',
             business: 'my house',
+            img: 'https://images.unsplash.com/photo-1629745572676-e9e71631a61f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80',
         }
     ]
     Revv.deleteMany({}, (err,deleted) => {

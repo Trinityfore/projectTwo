@@ -14,7 +14,13 @@ an application for reviewing purchases specifiaclly mode from instagram botiques
 
 # Screenshots 
 
+
 # Getting started
 
 
 # Future Enhancements
+
+* coming soon *
+-like reviews
+-upload images
+-search

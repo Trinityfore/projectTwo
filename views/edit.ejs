@@ -9,9 +9,10 @@
 </head>
 <body>
     <form action='/revv/<%=item._id%>?_method=PUT' method='POST'>
-        <input type='text' name='title' value='<%=item.title%>'>
-        <input type='text' name='entry' value='<%=item.entry%>'>
-        <input type='text' name='business' value='<%=item.business%>'>
+        <input class= 'title' type='text' name='title' value='<%=item.title%>'>
+        <input class='entry' type='text' name='entry' value='<%=item.entry%>'>
+        <input class= 'handle' type='text' name='business' value='<%=item.business%>'>
+        <input class='img' type='string' name='img' value=='<%=item.img%>'>
         <button type="submit">delete</button>
         <button type='submit'>update revv.</button>
         </form>

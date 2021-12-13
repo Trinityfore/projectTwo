@@ -9,9 +9,13 @@
 </head>
 <body>
     <form action="/revv" method="post">
-        <input type='text' name='title' placeholder='title'>
-        <input id='textbox'type='textarea' name='entry' placeholder='review'>
-        <input type='text' name='business' placeholder='handle'>
+        <input class= 'title' type='text' name='title' placeholder='title' required >
+        <textarea name="entry"
+          rows="5" cols="33">
+        add a description
+        </textarea>
+        <input type='text' name='business' placeholder='handle' required >
+        <input type='string' name='img' placeholder="add image" required>
         <input type="submit" value="add revv.">
     </form>
     
