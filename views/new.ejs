@@ -8,18 +8,17 @@
     <title>Revv</title>
 </head>
 <body>
+    <h1>REVV.</h1>
     <form action="/revv" method="post">
         <input class= 'title' type='text' name='title' placeholder='title' required >
-        <textarea name="entry"
-          rows="5" cols="33">
-        add a description
-        </textarea>
-        <input type='text' name='business' placeholder='handle' required >
-        <input type='string' name='img' placeholder="add image" required>
-        <input type="submit" value="add revv.">
+        <input class= 'handle' type='text' name='business' placeholder='handle' required >
+        <input class= 'image' type='string' name='img' placeholder="add image URL" required>
+        <textarea name="entry" id="styled"
+          rows="3" cols="25" placeholder="add a description"></textarea>
+        <input class= 'button' type="submit" value="add revv.">
+        
     </form>
     
 </body>
+<footer>2021  t.fore &copy </footer>
 </html>
-
-<!-- <textarea rows="2" cols="25" placeholder="This is the default text"></textarea>// use this for review entry instead of input tag? -->

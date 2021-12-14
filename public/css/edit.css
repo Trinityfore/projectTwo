@@ -1,5 +1,7 @@
 *{
     box-sizing: border-box;
+    margin: 0;
+    padding: 10px ;
 }
 
 body {
@@ -11,4 +13,56 @@ body {
     background-size: cover;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+}
 
+.title {
+    margin:10px;
+	border: 3px solid #cccccc;
+	padding: 5px;
+	font-family: Tahoma, sans-serif;
+}
+
+.handle {
+    margin: 10px;
+	border: 3px solid #cccccc;
+	padding: 5px;
+	font-family: Tahoma, sans-serif;
+}
+
+.image {
+    display: block;
+    margin: 10px;
+	border: 3px solid #cccccc;
+	padding: 5px;
+	font-family: Tahoma, sans-serif;
+    
+}
+
+.entry {
+	width: 600px;
+	height: 120px;
+	border: 3px solid #cccccc;
+	padding: 10px;
+	font-family: Tahoma, sans-serif;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+ button {
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 6px 25px;
+    margin: 10px;
+    border: 0;
+    border-radius: 0;
+    background-color: #9c5de2;
+    color: #fff;   
+}
