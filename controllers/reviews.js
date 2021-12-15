@@ -16,7 +16,9 @@ reviewRouter.get('/revv/new', (req,res) => {
 
 //delete route
 reviewRouter.delete('/revv/:id',(req,res)=> {
-    res.send('this has been deleted')
+    Revv.findByIdAndDelete(req.params.id,(err,deleted)=> {
+     res.redirect('/revv')   
+    })
 })
 
 //update
@@ -53,5 +55,3 @@ reviewRouter.get('/revv/:id',(req,res)=> {
 })
 
 module.exports = reviewRouter;
-
-//hey this is a test
